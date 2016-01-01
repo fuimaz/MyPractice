@@ -26,4 +26,16 @@ int main()
 		mysql_close(conn);
 		return 0;
 	}
+
+	char* create_db = "CREATE DATABASE IF NOT EXISTS test";
+	if (mysql_query(conn, create_db))
+	{
+		cout << "mysql insert failed " << mysql_errno(conn) 
+			<< endl;
+		mysql_close(conn);
+		return 0;
+	}
+
+	mysql_close(conn);
+	return 0;
 }
