@@ -16,7 +16,7 @@ $(EXEC): $(OBJS)
 	$(CC)	$(OPT) -o $@ $(OBJS) $(LDFLAGS) $(LIBS)
 
 base.o: base.cpp
-	$(CC) $(INC) $(OPT) -c $@ $<
+	$(CC) $(INC) $(OPT) -c $@ $^
 
 
 clean:
