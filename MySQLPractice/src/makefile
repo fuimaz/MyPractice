@@ -13,7 +13,7 @@ EXEC = base
 all: $(EXEC)
 
 $(EXEC): $(OBJS)
-	$(CC)	$(OPT) -o $@ $(OBJS) $(LINKER_PATH) $(LINKER)
+	$(CC)	$(OPT) -o $@ $(OBJS) $(LDFLAGS) $(LIBS)
 
 base.o: base.cpp
 	$(CC) $(INC) $(OPT) -c $@ $<

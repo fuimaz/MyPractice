@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 #include "mysql.h"
 #include "my_global.h"
@@ -7,8 +8,8 @@ using namespace std;
 
 int main()
 {
-	char* name	= "fuimaz";
-	char* pwd	= "fuimazv8p";
+	string name("fuimaz");
+	string passwd("fuimazv8p");
 
 	MYSQL* conn = mysql_init(NULL);
 	if (conn == NULL)
@@ -18,7 +19,7 @@ int main()
 		return 0;
 	}
 
-	if (mysql_real_connect(conn, NULL, name, pwd, NULL, 
+	if (mysql_real_connect(conn, NULL, name.c_str(), passwd.c_str(), NULL, 
 		0, NULL, 0) == NULL)
 	{
 		cout << "mysql connect failed " << mysql_errno(conn) 
