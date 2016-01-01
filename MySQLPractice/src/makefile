@@ -1,7 +1,7 @@
 CC = g++
 
 INC	= -I-I/usr/include/mysql
-OPT = -Wall -Who -deprecated -g
+OPT = -Wall -g
 
 LDFLAGS = -L/usr/lib/mysql
 LIBS = -lmysqlclient -lz -lm
