@@ -19,7 +19,7 @@ int main()
 	}
 
 	if (mysql_real_connect(conn, NULL, name, pwd, NULL, 
-		0, NULL, 0))
+		0, NULL, 0) == NULL)
 	{
 		cout << "mysql connect failed " << mysql_errno(conn) 
 			<< endl;
