@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#include "mysql.h"
-#include "my_global.h"
+#include "mysql/mysql.h"
+#include "mysql/my_global.h"
 
 using namespace std;
 
@@ -28,8 +28,8 @@ int main()
 		return 0;
 	}
 
-	char* create_db = "CREATE DATABASE IF NOT EXISTS test";
-	if (mysql_query(conn, create_db))
+	string create_db("CREATE DATABASE IF NOT EXISTS test");
+	if (mysql_query(conn, create_db.c_str()))
 	{
 		cout << "mysql insert failed " << mysql_errno(conn) 
 			<< endl;
