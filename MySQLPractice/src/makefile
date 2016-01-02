@@ -1,21 +1,22 @@
 CC = g++
 
-INC	= -I-I/usr/include/mysql
+INC	= -I/usr/include
+INC	= 
 OPT = -Wall -Wno-deprecated -g
 
 LDFLAGS = -L/usr/lib/mysql
-LIBS = -lmysqlclient -lz -lm
+LIBS = -lmysqlclient
 
-OBJS = base.o
+OBJS = base_pra.o
 
-EXEC = base
+EXEC = base_pra
 
 all: $(EXEC)
 
 $(EXEC): $(OBJS)
 	$(CC) $(OPT) -o $@ $(LDFLAGS) $(LIBS)
 
-base.o: base.cpp
+base_pra.o: base_pra.cpp
 	$(CC) $(INC) $(OPT) -c -o $@ $<
 
 clean:
