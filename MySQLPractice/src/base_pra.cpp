@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 
-#include "mysql/mysql.h"
-#include "mysql/my_global.h"
+#include "mysql.h"
+#include "my_global.h"
 
 using namespace std;
 
