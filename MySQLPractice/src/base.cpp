@@ -1,13 +1,8 @@
 #include <iostream>
 #include <string>
 
-#ifdef _WIN32
 #include "mysql.h"
 #include "my_global.h"
-#elif
-#include "mysql/mysql.h"
-#include "mysql/my_global.h"
-#endif
 
 using namespace std;
 
