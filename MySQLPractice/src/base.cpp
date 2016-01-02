@@ -11,7 +11,7 @@ int main()
 	string name("fuimaz");
 	string passwd("fuimazv8p");
 
-	MYSQL* conn = mysql_init(NULL);
+	MYSQL* conn = mysql_init(NULL); 
 	if (conn == NULL)
 	{
 		cout << "mysql init failed \n";

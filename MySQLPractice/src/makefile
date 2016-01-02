@@ -1,7 +1,7 @@
 CC = g++
 
 INC	= -I-I/usr/include/mysql
-OPT = -Wall -g
+OPT = -Wall -Wno-deprecated -g
 
 LDFLAGS = -L/usr/lib/mysql
 LIBS = -lmysqlclient -lz -lm
@@ -13,8 +13,10 @@ EXEC = base
 all: $(EXEC)
 
 $(EXEC): $(OBJS)
-	$(CC)	$(OPT) -o $@ $^ $(INC) $(LDFLAGS) $(LIBS)
+	$(CC) $(OPT) -o $@ $(LDFLAGS) $(LIBS)
 
+base.o: base.cpp
+	$(CC) $(INC) $(OPT) -c -o $@ $<
 
 clean:
 	rm -f $(OBJS) $(EXEC)
