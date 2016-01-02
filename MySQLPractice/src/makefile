@@ -12,11 +12,11 @@ EXEC = base_pra
 
 all: $(EXEC)
 
-#$(EXEC): $(OBJS)
-#	$(CC) $(OPT) -o $@ $(LDFLAGS) $(LIBS)
-
 $(EXEC): $(OBJS)
-	$(CC) $(OPT) -o $@ -L/usr/lib/mysql -lmysqlclient
+	$(CC) $(OPT) -o $@ $(OBJS) $(LDFLAGS) $(LIBS)
+
+#$(EXEC): $(OBJS)
+#	$(CC) $(OPT) -o $@ $(OBJS) -L/usr/lib/mysql -lmysqlclient
 
 base_pra.o: base_pra.cpp
 	$(CC) $(INC) $(OPT) -c -o $@ $<
