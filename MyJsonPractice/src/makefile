@@ -15,7 +15,7 @@ EXEC = base_pra
 all: $(EXEC)
 
 $(EXEC): $(OBJS)
-	$(CC) $(OPT) -o $@ $(OBJS) $(LDFLAGS)  $(LBS)
+	$(CC) $(OPT) -o $@ $(OBJS) $(INC) $(LDFLAGS)  $(LBS)
 
  base_pra.o:  base_pra.cpp
 	$(CC) $(INC) $(OPT) -c -o $@ $<
