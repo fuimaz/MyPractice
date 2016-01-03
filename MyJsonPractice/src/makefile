@@ -16,7 +16,7 @@ $(EXEC): $(OBJS)
 	$(CC) $(OPT) -o $@ $(OBJS) $(LDFLAGS)  $(LBS)
 
  base_pra.o:  base_pra.cpp
-	$(CC) $(INC) $(OPT) -o -c $@ $<
+	$(CC) $(INC) $(OPT) -c -o $@ $<
 
 clean:
 	rm -f $(EXEC) $(OBJS) *.o
