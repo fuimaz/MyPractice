@@ -2,10 +2,8 @@ CC = g++
 OPT = -Wall -g
 
 INC = -I/usr/include
-LDFLAGS = -L/usr/lib
-#LDFLAGS =
+LDFLAGS = /usr/lib
 LBS = -llibjson_linux-gcc-4.9.2_libmt
-#LBS =
 
 OBJS = base_pra.o
 
