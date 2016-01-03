@@ -1,7 +1,7 @@
 CC = g++
 OPT = -Wall -g
 
-INC = -I/usr/include/json
+INC = -I/usr/include
 LDFLAGS = -L/usr/lib
 #LDFLAGS =
 LBS = -llibjson_linux-gcc-4.9.2_libmt
@@ -15,7 +15,7 @@ EXEC = base_pra
 all: $(EXEC)
 
 $(EXEC): $(OBJS)
-	$(CC) $(OPT) -o $@ $(OBJS) $(INC) $(LDFLAGS)  $(LBS)
+	$(CC) $(OPT) -o $@ $(OBJS) $(LDFLAGS)  $(LBS)
 
  base_pra.o:  base_pra.cpp
 	$(CC) $(INC) $(OPT) -c -o $@ $<
