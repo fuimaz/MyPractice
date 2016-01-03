@@ -1,6 +1,6 @@
 CC = g++
 
-#INC	= -I/usr/include/mysql
+INC	= -I/usr/include/mysql
 OPT = -Wall -Wno-deprecated -g
 
 LDFLAGS = -L/usr/lib/mysql
