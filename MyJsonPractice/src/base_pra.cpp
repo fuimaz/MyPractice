@@ -37,11 +37,11 @@ int main()
 	is.open ("./JsonText", std::ios::binary );
 	Json::Reader reader;
 	Json::Value root;
-	if(reader.parse(is,root))   ///root保存整个Json对象的value
+	if(reader.parse(is,root))
 	{
 		if(!root["name"].isNull())
 		{
-			cout<<root["name"].asString()<<endl;    ///读取元素
+			cout<<root["name"].asString()<<endl;
 			Json::Value arrayObj = root["array"];
 			for(int i=0 ; i< arrayObj.size() ;i++)
 			{

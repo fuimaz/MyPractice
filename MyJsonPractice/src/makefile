@@ -3,7 +3,7 @@ OPT = -Wall -g
 
 INC = -I/usr/include/json
 LDFLAGS = -L/usr/lib
-LBS = -ljsonlib
+LBS = -llibjson_linux-gcc-4.9.2_libmt
 
 OBJS = base_pra.o
 
