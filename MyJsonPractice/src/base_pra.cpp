@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
 	Json::Reader jreader;
-	string	value("{\"uploadid\": \"UP000000\",\"code\": 100,\"msg\": \"\",\"files\": \"\"}");
+//	string	value("{\"uploadid\": \"UP000000\",\"code\": 100,\"msg\": \"\",\"files\": \"\"}");
 	Json::Value	jvalue;
 	
 	if (jreader.parse(value, jvalue))
