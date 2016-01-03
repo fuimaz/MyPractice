@@ -2,7 +2,7 @@ CC = g++
 OPT = -Wall -g
 
 INC = -I/usr/include/json
-LDFLAGS = -L/usr/lib/json
+LDFLAGS = -L/usr/lib
 LBS = -ljsonlib
 
 OBJS = base_pra.o
