@@ -28,11 +28,13 @@
 #include <stdlib.h>
 #include <iostream>
 #include <fstream>
+
 using namespace std;
+
 int main()
 {
 	ifstream is;
-	is.open ("JsonText", std::ios::binary );
+	is.open ("./JsonText", std::ios::binary );
 	Json::Reader reader;
 	Json::Value root;
 	if(reader.parse(is,root))   ///root保存整个Json对象的value
